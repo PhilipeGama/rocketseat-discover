@@ -1,0 +1,17 @@
+GET
+curl -i http://localhost:3000/posts
+
+HEAD 
+curl -I http://localhost:3000/posts
+
+POST
+curl -d '{ "id": 2,"title": "json-server-2","author": "mayk brito"}' -H "Content-type: application/json" -X POST http://localhost:3000/posts
+
+PUT
+curl -d '{"name":"philipe"}' -H 'Content-type: application/json' -X PUT http://localhost:3000/profile
+curl -d '{"author":"philipe"}' -H 'Content-type:application/json' -X PUT http://localhost:3000/posts/2 -i
+
+PATCH
+curl -d '{"title":"my-title"}' -H "Content-type: application/json" -X PATCH http://localhost:3000/posts/1
+
+
